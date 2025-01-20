@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Register from './components/Register';
+import CampaignForm from './components/CampaignForm';
+import CampaignList from './components/CampaignList';
+import Login from './components/Login';
+import CampaignPerformance from './components/CampaginPerfoemace';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/create-campaign" element={<CampaignForm />} />
+        <Route path="/campaign-list" element={<CampaignList />} />
+        <Route path="/campaign-performance" element={<CampaignPerformance />} />
+
+        
+      </Routes>
+    </Router>
   );
 }
 
