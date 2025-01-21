@@ -12,7 +12,7 @@ const CampaignPerformance = ({ campaignId }) => {
   useEffect(() => {
     const fetchPerformanceData = async () => {
       try {
-        const response = await axios.get(`http://localhost:2000/api/campaigns/${campaignId}`);
+        const response = await axios.get(`https://emailcamp.vercel.app/api/campaigns/${campaignId}`);
         setPerformanceData(response.data);
       } catch (error) {
         console.error("Error fetching performance data", error);
