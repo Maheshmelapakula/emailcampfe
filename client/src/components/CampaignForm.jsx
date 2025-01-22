@@ -33,7 +33,7 @@ const CampaignForm = () => {
 
     try {
       const response = await axios.post(
-        "https://emailcamp.vercel.app/api/campaigns/create",
+        "http://localhost:7000/api/campaigns/create",
         campaignData
       );
       setMessage("Campaign created successfully!");

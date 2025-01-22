@@ -15,7 +15,7 @@ const CampaignList = () => {
   useEffect(() => {
     const fetchCampaigns = async () => {
       try {
-        const response = await axios.get("https://emailcamp.vercel.app/api/campaigns");
+        const response = await axios.get("http://localhost:7000/api/campaigns");
         setCampaigns(response.data);
         setLoading(false);
       } catch (err) {
