@@ -37,7 +37,7 @@ const CampaignForm = () => {
         campaignData
       );
       setMessage("Campaign created successfully!");
-      navigate("/"); // Redirect after successful submission
+      navigate("/campaign-list"); // Redirect after successful submission
     } catch (error) {
       console.error("Error creating campaign:", error);
       setMessage("Failed to create campaign. Please try again.");

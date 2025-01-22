@@ -12,7 +12,7 @@ const Register = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://emailcamp.vercel.app/api/users/register", {
+      const response = await axios.post("http://localhost:2000/api/users/register", {
         name,
         email,
         password,
@@ -21,7 +21,7 @@ const Register = () => {
 
      
       if (response.data && response.data.success) {
-        window.location.href = "/login"; // Redirect to login page after successful registration
+        window.location.href = "/create-campaign"; // Redirect to login page after successful registration
       } else {
         setError(response.data.message || "Something went wrong!");
       }

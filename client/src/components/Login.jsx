@@ -18,7 +18,7 @@ const Login = () => {
       console.log(response.data);
 
       if (response.data && response.data.success) {
-        window.location.href = "/campaign-form"; // // Redirect to the campaign form page after successful login
+        window.location.href = "/create-campaign"; // // Redirect to the campaign form page after successful login
       } else {
         setError(response.data.message || "Something went wrong!");
       }
