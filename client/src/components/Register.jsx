@@ -12,7 +12,7 @@ const Register = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("/api/users/register", {
+      const response = await axios.post('https://emailcamp.vercel.app/api/users/register', {
         name,
         email,
         password,
